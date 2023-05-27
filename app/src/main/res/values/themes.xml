@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.TrashCareAdmin" parent="Base.Theme.TrashCareAdmin" />
+
+    <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>
