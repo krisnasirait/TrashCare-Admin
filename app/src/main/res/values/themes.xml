@@ -3,11 +3,19 @@
     <style name="Base.Theme.TrashCareAdmin" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green_500</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/green_200</item>
     </style>
 
     <style name="Theme.TrashCareAdmin" parent="Base.Theme.TrashCareAdmin" />
 
     <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/green_200</item>
     </style>
 </resources>
