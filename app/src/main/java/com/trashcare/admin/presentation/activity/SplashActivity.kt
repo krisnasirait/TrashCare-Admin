@@ -1,4 +1,4 @@
-package com.trashcare.admin
+package com.trashcare.admin.presentation.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
