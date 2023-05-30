@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/menu_home"
-        android:name="com.trashcare.admin.HomeFragment"
+        android:name="com.trashcare.admin.presentation.fragment.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/menu_history"
-        android:name="com.trashcare.admin.HistoryFragment"
+        android:name="com.trashcare.admin.presentation.fragment.HistoryFragment"
         android:label="History"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/menu_profile"
-        android:name="com.trashcare.admin.ProfileFragment"
+        android:name="com.trashcare.admin.presentation.fragment.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>
