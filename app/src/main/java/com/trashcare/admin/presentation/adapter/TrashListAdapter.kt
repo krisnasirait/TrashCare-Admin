@@ -9,6 +9,7 @@ class TrashListAdapter(
     private val itemClickListener: OnItemClickListener
 ) : RecyclerView.Adapter<TrashListAdapter.TrashListViewHolder>() {
 
+
     inner class TrashListViewHolder(
         private val binding: ItemTrashListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
