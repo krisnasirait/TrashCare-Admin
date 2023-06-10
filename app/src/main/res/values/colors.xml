@@ -7,4 +7,6 @@
     <color name="green_500">#48CE79</color>
     <color name="green_600">#2BA156</color>
     <color name="green_700">#207941</color>
+
+    <color name="inactive">#AFE9C4</color>
 </resources>
