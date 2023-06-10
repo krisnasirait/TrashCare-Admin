@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "341544083003",
+    "project_id": "trash-care-admin",
+    "storage_bucket": "trash-care-admin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341544083003:android:db04f373446aa5d2a2061e",
+        "android_client_info": {
+          "package_name": "com.trashcare.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341544083003-2jljvjjo77a72shaso3r6u05vdiuhl4a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trashcare.admin",
+            "certificate_hash": "e393833e5a8b5fe8a50074142b76995eb7bec0b3"
+          }
+        },
+        {
+          "client_id": "341544083003-9bi1fb900q4daprihseb7tacugb913b6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgQMTpVEJ64dacxDrUaiYD5Tvhidw3pgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341544083003-9bi1fb900q4daprihseb7tacugb913b6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
