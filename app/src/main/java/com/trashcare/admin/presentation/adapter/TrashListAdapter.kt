@@ -3,8 +3,10 @@ package com.trashcare.admin.presentation.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.trashcare.admin.R
+import com.trashcare.admin.TrashCareAdminApp
 import com.trashcare.admin.data.model.response.usersubmission.UserSubmissionResponseItem
 import com.trashcare.admin.databinding.ItemTrashListBinding
 
@@ -21,7 +23,13 @@ class TrashListAdapter(
             binding.apply {
                 tvName.text = item.nama
                 tvIdUser.text = item.userID
-                tvTrashDesc.text = item.deskripsi
+                tvStatus.text = item.status
+
+                if (item.status == "Verified") {
+                    tvStatus.setTextColor(ContextCompat.getColor(TrashCareAdminApp.context, R.color.green_600))
+                } else if (item.status == "Rejected") {
+                    tvStatus.setTextColor(ContextCompat.getColor(TrashCareAdminApp.context, R.color.red))
+                }
 
                 btnDetails.setOnClickListener {
                     itemClickListener.onItemPlaceListClicked(

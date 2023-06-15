@@ -26,6 +26,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivSampah"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">
@@ -47,37 +48,23 @@
                 android:textColor="@color/green_600"
                 android:fontFamily="@font/poppins_medium"/>
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvTrashDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:textSize="8sp"
+                android:text="@string/list_sampah"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="Status : "
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_medium"/>
-
-                <TextView
-                    android:id="@+id/tvStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="12sp"
-                    android:text="Verified"
-                    android:textColor="@color/green_600"
-                    android:fontFamily="@font/poppins_medium"/>
-
-            </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnDetails"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:text="Details"/>
-
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Verfieid"
+                android:textColor="@color/green_600"
+                android:fontFamily="@font/poppins_medium"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
