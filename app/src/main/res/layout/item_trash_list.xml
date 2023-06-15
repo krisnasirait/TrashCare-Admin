@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
                     android:text="Verified"
-                    android:textColor="@color/green_600"
+                    android:textColor="@color/yellow"
                     android:fontFamily="@font/poppins_medium"/>
 
             </LinearLayout>

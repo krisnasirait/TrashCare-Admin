@@ -28,11 +28,11 @@ class TrashCareAdminViewModel(
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> = _errorMessage
 
-    fun getUserSubmission() {
+    fun getUserSubmission(status: String) {
         _isLoading.postValue(true)
         viewModelScope.launch(Dispatchers.IO) {
             runCatching {
-                val response = trashAdminRepository.getUserSubmission()
+                val response = trashAdminRepository.getUserSubmission(status)
                 response.body()
             }.onSuccess { userSub ->
                 withContext(Dispatchers.Main) {
