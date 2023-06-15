@@ -112,7 +112,7 @@
                 android:id="@+id/textInputLayoutNamaUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Id"
+                android:hint="Nama User"
                 app:startIconDrawable="@drawable/round_perm_identity_24"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 tools:hintEnabled="false"
@@ -141,7 +141,7 @@
                 android:id="@+id/textInputLayoutListSampah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Id"
+                android:hint="List Sampah"
                 app:startIconDrawable="@drawable/baseline_playlist_add_check_24"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 tools:hintEnabled="false"
@@ -149,6 +149,34 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etListSampah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:clickable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="16sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Status"
+                app:startIconDrawable="@drawable/baseline_playlist_add_check_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                tools:hintEnabled="false"
+                android:clickable="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStatus"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -178,7 +206,7 @@
             app:cornerRadius="8dp"
             android:backgroundTint="#DB2727"
             android:text="Tolak"
-            android:fontFamily="@font/poppins_bold"e
+            android:fontFamily="@font/poppins_bold"
             android:layout_margin="10dp"/>
 
         <com.google.android.material.button.MaterialButton

@@ -1,12 +1,43 @@
 package com.trashcare.admin.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.trashcare.admin.R
+import android.util.Log
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.trashcare.admin.data.model.request.verification.VerificationActionBody
+import com.trashcare.admin.databinding.ActivityDetailTransactionBinding
+import com.trashcare.admin.presentation.viewmodel.TrashCareAdminViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailTransactionActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDetailTransactionBinding
+    private val trashCareAdminViewModel: TrashCareAdminViewModel by viewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail_transaction)
+        binding = ActivityDetailTransactionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
+
+        val id = intent.getStringExtra("id")
+        val userName = intent.getStringExtra("userName")
+        val description = intent.getStringExtra("descSampah")
+        val status = intent.getStringExtra("status")
+
+        binding.etId.setText("$id")
+        binding.etNamaUser.setText("$userName")
+        binding.etListSampah.setText("$description")
+        binding.etStatus.setText("$status")
+
+        binding.btnTolak.setOnClickListener {
+            trashCareAdminViewModel.verifUser(id.toString(), VerificationActionBody("Tolak"))
+        }
+
+        binding.btnVerify.setOnClickListener {
+            trashCareAdminViewModel.verifUser(id.toString(), VerificationActionBody("Verify"))
+        }
     }
 }
