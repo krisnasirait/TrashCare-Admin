@@ -4,13 +4,14 @@
 TrashCare-Admin is a dedicated administrative application for the TrashCare Capstone Project. This app serves as the crucial administrative interface where an administrator can verify or reject user requests for trash submissions. 
 
 ## App Screenshots
-
-![Splash Screen](https://i.imgur.com/fhYmsxY.png)
-![Login](https://i.imgur.com/OAaRc94.png)
-![Register](https://i.imgur.com/CeNKE5M.png)
-![Home](https://i.imgur.com/oSB5G6K.png)
-![History](https://i.imgur.com/ZeYjsIz.png)
-![Verify](https://i.imgur.com/JkrGYRT.png)
+<p float="left">
+  <img src="https://i.imgur.com/fhYmsxY.png" width="100" />
+  <img src="https://i.imgur.com/OAaRc94.png" width="100" /> 
+  <img src="https://i.imgur.com/CeNKE5M.png" width="100" />
+  <img src="https://i.imgur.com/oSB5G6K.png" width="100" />
+  <img src="https://i.imgur.com/ZeYjsIz.png" width="100" />
+  <img src="https://i.imgur.com/JkrGYRT.png" width="100" />
+</p>
 
 ## Features
 
