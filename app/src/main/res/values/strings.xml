@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TrashCare-Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trash_list">Trash List</string>
+    <string name="welcome_back">Welcome Back.</string>
+    <string name="hello">Hello!</string>
+    <string name="list_sampah">Botol plastik, Kertas koran, Kaleng aluminium, Kardus bekas</string>
 </resources>
