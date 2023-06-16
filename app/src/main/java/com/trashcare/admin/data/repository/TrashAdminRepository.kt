@@ -10,8 +10,8 @@ class TrashAdminRepository(
     private val apiService: ApiService
 ) {
 
-    suspend fun getUserSubmission() : Response<UserSubmissionResponse> {
-        return apiService.getUserSubmission()
+    suspend fun getUserSubmission(status: String) : Response<UserSubmissionResponse> {
+        return apiService.getUserSubmission(status)
     }
 
     suspend fun verifyTranscation(trashId: String, verificationActionBody: VerificationActionBody) : Response<VerificationResponse> {

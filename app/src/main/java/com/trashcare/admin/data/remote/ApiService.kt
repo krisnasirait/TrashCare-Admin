@@ -12,8 +12,9 @@ import retrofit2.http.PUT
 interface ApiService {
 
     @GET("apiusersubmission/usersubmission")
-    suspend fun getUserSubmission()
-            : Response<UserSubmissionResponse>
+    suspend fun getUserSubmission(
+        @Header("Status") status: String
+    ): Response<UserSubmissionResponse>
 
     @PUT("apiadminverification/verification")
     suspend fun verifyUserSubmission(

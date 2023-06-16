@@ -8,16 +8,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.trashcare.admin.R
 import com.trashcare.admin.TrashCareAdminApp
 import com.trashcare.admin.data.model.response.usersubmission.UserSubmissionResponseItem
+import com.trashcare.admin.databinding.ItemHistoryBinding
 import com.trashcare.admin.databinding.ItemTrashListBinding
 
-class TrashListAdapter(
+class HistoryAdapter(
     private val itemClickListener: OnItemClickListener
-) : RecyclerView.Adapter<TrashListAdapter.TrashListViewHolder>() {
+) : RecyclerView.Adapter<HistoryAdapter.HistoryListViewHolder>() {
 
     private val itemList = mutableListOf<UserSubmissionResponseItem?>()
 
-    inner class TrashListViewHolder(
-        private val binding: ItemTrashListBinding
+    inner class HistoryListViewHolder(
+        private val binding: ItemHistoryBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: UserSubmissionResponseItem) {
             binding.apply {
@@ -29,9 +30,11 @@ class TrashListAdapter(
                     tvStatus.setTextColor(ContextCompat.getColor(TrashCareAdminApp.context, R.color.green_600))
                 } else if (item.status == "Rejected") {
                     tvStatus.setTextColor(ContextCompat.getColor(TrashCareAdminApp.context, R.color.red))
+                } else if (item.status == "Pending") {
+                    tvStatus.setTextColor(ContextCompat.getColor(TrashCareAdminApp.context, R.color.yellow))
                 }
 
-                btnDetails.setOnClickListener {
+                root.setOnClickListener {
                     itemClickListener.onItemPlaceListClicked(
                         item.trashID,
                         item.nama,
@@ -43,9 +46,9 @@ class TrashListAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrashListViewHolder {
-        return TrashListViewHolder(
-            ItemTrashListBinding.inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryListViewHolder {
+        return HistoryListViewHolder(
+            ItemHistoryBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -57,7 +60,7 @@ class TrashListAdapter(
         return itemList.size
     }
 
-    override fun onBindViewHolder(holder: TrashListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: HistoryListViewHolder, position: Int) {
         itemList[position]?.let { holder.bind(it) }
 
 

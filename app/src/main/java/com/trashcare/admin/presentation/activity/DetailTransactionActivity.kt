@@ -1,5 +1,6 @@
 package com.trashcare.admin.presentation.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -34,10 +35,14 @@ class DetailTransactionActivity : AppCompatActivity() {
 
         binding.btnTolak.setOnClickListener {
             trashCareAdminViewModel.verifUser(id.toString(), VerificationActionBody("Tolak"))
+            Toast.makeText(this, "Transaction $id ditolak", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
         binding.btnVerify.setOnClickListener {
             trashCareAdminViewModel.verifUser(id.toString(), VerificationActionBody("Verify"))
+            Toast.makeText(this, "Transaction $id disetujui", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

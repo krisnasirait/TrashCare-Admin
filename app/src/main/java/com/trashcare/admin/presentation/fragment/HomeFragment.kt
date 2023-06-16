@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.trashcare.admin.R
 import com.trashcare.admin.databinding.FragmentHomeBinding
 import com.trashcare.admin.presentation.activity.DetailTransactionActivity
 import com.trashcare.admin.presentation.adapter.TrashListAdapter
@@ -46,7 +44,7 @@ class HomeFragment : Fragment(),
     }
 
     private fun setupViewModelObservers() {
-        trashCareAdminViewModel.getUserSubmission()
+        trashCareAdminViewModel.getUserSubmission("Pending")
 
         trashCareAdminViewModel.listSubmission.observe(viewLifecycleOwner) {
             trashListAdapter.setData(it)
@@ -55,7 +53,7 @@ class HomeFragment : Fragment(),
 
     override fun onResume() {
         super.onResume()
-        trashCareAdminViewModel.getUserSubmission()
+        trashCareAdminViewModel.getUserSubmission("Pending")
     }
 
 
